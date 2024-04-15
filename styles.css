@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 0 0 calc(16.666% - 40px); /* 1/6th of the screen width minus padding */
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-right: 20px; /* Added margin to create space between sidebar and content */
+    border-radius: 10px; /* Round the border of the sidebar */
+    position: relative;
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center; /* Center the title */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px; /* Round the button */
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text */
+}
+
+.sidebar a:nth-child(1) {
+    background-color: #b3d9ff; /* Light blue for the first button */
+}
+
+.sidebar a:nth-child(2) {
+    background-color: #66b3ff; /* Medium blue for the second button */
+}
+
+.sidebar a:nth-child(3) {
+    background-color: #3385ff; /* Dark blue for the third button */
+}
+
+.sidebar a:nth-child(4) {
+    background-color: #0059b3; /* Darkest blue for the fourth button */
+}
+
+.sidebar a:hover {
+    filter: brightness(0.8); /* Darken the button on hover */
+}
+
+/* Minimize button */
+.minimize-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.minimize-button:hover {
+    background-color: #dddddd;
+}
+
+.minimize-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed h1,
+.sidebar.collapsed ul {
+    display: none;
+}
+
+/* Expand button */
+.expand-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: none; /* Hide the button by default */
+}
+
+.expand-button:hover {
+    background-color: #dddddd;
+}
+
+.expand-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate the arrow in the opposite direction */
+}
+
+.sidebar.collapsed + #expandButton {
+    display: block; /* Show the button only when the sidebar is collapsed */
+}
