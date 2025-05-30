@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - TCP Photos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>tcp.photos</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html" class="nav-btn active">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-btn">About Me</a></li>
+                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
+                    <li><a href="https://instagram.com/tcp.photos" target="_blank" class="nav-btn instagram">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="portfolio-page">
+        <div class="container">
+            <h2>Portfolio</h2>
+            
+            <div class="portfolio-categories">
+                <div class="category-item" onclick="location.href='automotive.html'">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/600x400/e74c3c/ffffff?text=Automotive" alt="Automotive Photography">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Automotive</h3>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="location.href='other.html'">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Other" alt="Other Photography">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Other</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
