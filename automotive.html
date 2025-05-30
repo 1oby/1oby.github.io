@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive - TCP Photos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>tcp.photos</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html" class="nav-btn">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-btn">About Me</a></li>
+                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
+                    <li><a href="https://instagram.com/tcp.photos" target="_blank" class="nav-btn instagram">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="gallery-page">
+        <div class="container">
+            <div class="gallery-header">
+                <a href="portfolio.html" class="back-btn">← Back to Portfolio</a>
+                <h2>Automotive Photography</h2>
+            </div>
+            
+            <div class="upload-section">
+                <input type="file" id="imageUpload" multiple accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('imageUpload').click()" class="upload-btn">Upload Images</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Sample automotive images -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="https://via.placeholder.com/400x500/e74c3c/ffffff?text=Car+1" alt="Car Photo 1">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Car+2" alt="Car Photo 2">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="https://via.placeholder.com/400x500/e67e22/ffffff?text=Car+3" alt="Car Photo 3">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://via.placeholder.com/600x400/d35400/ffffff?text=Car+4" alt="Car Photo 4">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
