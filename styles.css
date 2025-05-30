@@ -19,7 +19,8 @@ body {
 
 /* Header Styles */
 header {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -83,10 +84,35 @@ nav ul {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Hero Section */
-.hero {
+/* Hero Landscape Section */
+.hero-landscape {
     height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.7) 0%, rgba(52, 73, 94, 0.5) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,12 +124,14 @@ nav ul {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .cta-btn {
@@ -116,12 +144,84 @@ nav ul {
     border: 2px solid white;
     transition: all 0.3s ease;
     font-weight: 500;
+    backdrop-filter: blur(10px);
 }
 
 .cta-btn:hover {
     background: white;
-    color: #667eea;
+    color: #2c3e50;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Home About Section */
+.home-about {
+    padding: 5rem 0;
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text-section h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.about-text-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.about-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.portrait-section {
+    display: flex;
+    justify-content: center;
+}
+
+.portrait-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.portrait-image:hover {
+    transform: translateY(-10px);
+}
+
+.portrait-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
 }
 
 /* Gallery Styles */
@@ -331,6 +431,28 @@ nav ul {
         font-size: 2rem;
     }
 
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .about-text-section h3 {
+        font-size: 2rem;
+    }
+
+    .portrait-image {
+        max-width: 300px;
+    }
+
+    .portrait-image img {
+        height: 375px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -357,6 +479,18 @@ nav ul {
     }
 
     .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .home-about {
+        padding: 3rem 0;
+    }
+
+    .about-text-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-text-section p {
         font-size: 1rem;
     }
 
