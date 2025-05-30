@@ -57,6 +57,7 @@ nav ul {
     align-items: center;
 }
 
+/* Unified Button Styles - Used for navigation, back buttons, and read more */
 .nav-btn {
     text-decoration: none;
     color: #555;
@@ -67,6 +68,7 @@ nav ul {
     background: rgba(128, 128, 128, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: inline-block;
 }
 
 .nav-btn:hover {
@@ -145,24 +147,8 @@ nav ul {
     margin-bottom: 1.5rem;
 }
 
-.about-btn {
-    display: inline-block;
+.about-text-section .nav-btn {
     margin-top: 1rem;
-    padding: 1rem 2rem;
-    background: rgba(128, 128, 128, 0.15);
-    color: #2c3e50;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.about-btn:hover {
-    background: rgba(128, 128, 128, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .portrait-section {
@@ -272,24 +258,6 @@ nav ul {
     align-items: center;
     margin-bottom: 3rem;
     gap: 2rem;
-}
-
-.back-btn {
-    color: #2c3e50;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.6rem 1.2rem;
-    background: rgba(128, 128, 128, 0.15);
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.back-btn:hover {
-    background: rgba(128, 128, 128, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .gallery-page h2 {
